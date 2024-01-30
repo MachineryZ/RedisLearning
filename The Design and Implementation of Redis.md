@@ -28,3 +28,41 @@ SDS 空间分配策略：
 ---
 
 ## 第三章 链表
+
+和普通的 c 链表没有太多差别
+
+---
+
+## 第四章 字典
+
+redis 使用哈希表作为底层实现，一个哈希表里面可以有多个哈希表节点，而每个哈希表节点就保存了一个字典中的一个键值对。
+
+~~~c++
+typedef struct dictht {
+	dictEntry **table;//哈希表数组
+  unsigned long size;//哈希表大小
+  unsigned long sizemask;//哈希表大小掩码，用于计算索引值
+  unsigned long used;//哈希表已有节点数量
+}dictht;
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
